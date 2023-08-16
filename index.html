@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <div id="app"></div>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/jsx">
+    const app = document.getElementById("app");
+
+    function Header({ title }) {
+      return <h1>{title ? title : 'Default title'}</h1>;
+    }
+
+    function HomePage() {
+      const names = ["Ada", "Grace", "Margaret"];
+
+      const [likes, setLikes] = React.useState(0);
+
+      function handleClick() {
+        setLikes(likes + 1);
+      }
+
+      return (
+        <div>
+          <Header title="Develop and preview" />
+          <ul>
+            {names.map((name) => (
+              <li key={name}>{name}</li>
+              ))
+            }
+          </ul>
+
+          <button onClick={handleClick}>Like ({likes})</button>
+        </div>
+      )
+    }
+
+    ReactDOM.render(<HomePage/>, app);
+  </script>
+
+  <h1>Buttons I stole</h1>
+  <div>Button from nextjs.org</div>
+  <a role="button" class="nextjs-btn">Submit</a>
+
+  <h1>Cards</h1>
+  <div class="card-wrapper">
+  <div class="card">
+     <p>
+     I am a really simple card with text.
+     I have only the thin border and my corners can be rounded.
+     </p>
+  </div>
+  <div class="card card-double-border">
+    <p>
+     I am the card like the simple one,
+     but I have two borders to empasize that I am more important.
+    </p>
+  </div>
+  <div class="card card-3d">
+    If you like to add volume to your app, you will use me.
+  </div>
+  <div class="card card-gradient-positive">
+    Would you like to see more colorful wrapper for your infomation.
+    I will add some positive colors to create your mood.
+  </div>
+  <div class="card card-gradient-depressive">
+    Do you need to show that information is sad? Express this depression using me.
+  </div>
+  <div class="card card-razor">
+    You like shard edges and want your information was lika a hedgehog. So, I will protect your information with my needles.
+  </div>
+  <div class="card card-shit">
+    I am always stinking and my color is brown like your shit! Flies like me.
+  </div>
+  </div>
+
+  <h1>Hairlines</h1>
+  <div class="hairline-wrapper">
+    <span>Basic hairline</span>
+    <hr class="hairline"/>
+    <span>Hairline with scissors</span>
+    <hr class="hairline hairline-scissor"/>
+    <span>Zigzag</span>
+    <hr class="hairline hairline-zigzag"/>
+    <span>Crime scene. Don't cross!!!</span>
+    <hr class="hairline hairline-crime"/>
+    <span>Bio hazard. Toxic and dangerous</span>
+    <hr class="hairline hairline-bio-hazard"/>
+    <span>Rainbow. 7 colors after the rain</span>
+    <hr class="hairline hairline-rainbow"/>
+    <span>Line of hard working ants</span>
+    <hr class="hairline hairline-ants"/>
+  </div>
+
+  <h1>Tiles</h1>
+  <div class="tiles-wrapper">
+    <span>Empty tile</span>
+    <div class="tile"></div>
+    <span>Brick to build something. Fireplace for instance</span>
+    <div class="tile brick"></div>
+    <span>Beach can be covered with stones</span>
+    <div class="tile stone"></div>
+    <span>Inside your flat you look at the floor and see LAMINAT</span>
+    <div class="tile laminat"></div>
+    <span>Green grass like sunny weather</span>
+    <div class="tile grass"></div>
+    <span>Lego brick</span>
+    <div class="tile lego"></div>
+  </div>
+
+  <h1>Interactive elements</h1>
+  <div class="interactive-wrapper">
+  I follow your cursor with my pupils.
+  <div class="interactive-eyes"></div>
+  This element is a switcher. (Checkbox!)
+  <div class="interactive-tumbler"></div>
+  This element open a hint.
+  <div class="interactive-hinkali"></div>
+  </div>
+</html>

@@ -1,0 +1,80 @@
+:root {
+  --font-sans-fallback: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+html {
+  font-family: var(--font-sans-fallback);
+  font-size: 16px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a[role=button] {
+  user-select: none;
+}
+
+.nextjs-btn {
+  display: inline-block;
+  background: #0070f3;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 2rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 7px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background.2s ease, box-shadow.2s ease;
+}
+
+.nextjs-btn:hover {
+  background: #0076FF;
+}
+
+.card-wrapper {
+  display: flex;
+}
+
+.card {
+  margin: 1rem;
+  max-width: 200px;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+}
+
+.card-double-border {
+  border: 1rem outset pink;
+  box-shadow: 0 0 0 2rem skyblue;
+}
+
+.card-3d {
+  border-radius: 0;
+}
+
+.card-3d:after {
+  display: block;
+  content: '';
+  border: 10px solid red;
+}
+
+.card-shit {
+  background-color: brown;
+} 
+
+.card-gradient-positive {
+  color: white;
+  background: linear-gradient(orange, green, pink, purple);
+}
+
+.card-gradient-depressive {
+  background: linear-gradient(to left top, gray, darkgray);
+}
+
+.tile {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid black;
+}
